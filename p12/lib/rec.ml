@@ -8,3 +8,11 @@ let count_factors n =
     else aux (i + 1) count
   in
   if n <= 0 then 0 else aux 1 0
+
+let rec find_triangular_with_divisors target n =
+  let tri_num = triangle_number n in
+  let factors_count = count_factors tri_num in
+  if factors_count > target then tri_num
+  else find_triangular_with_divisors target (n + 1)
+
+let result = find_triangular_with_divisors 500 1
