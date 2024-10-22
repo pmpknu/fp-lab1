@@ -20,4 +20,3 @@
  (description "two tasks for the first lab for fp course at itmo")
  (depends ocaml dune)
 )
-
