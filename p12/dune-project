@@ -1,0 +1,23 @@
+(lang dune 3.16)
+
+(name p12)
+
+(generate_opam_files true)
+
+(source
+ (github pmpknu/fp-lab1))
+
+(authors "Dan Gorlyakov")
+
+
+(license MIT)
+
+; (documentation https://url/to/documentation)
+
+(package
+ (name p12)
+ (synopsis "fp lab1")
+ (description "two tasks for the first lab for fp course at itmo")
+ (depends ocaml dune)
+)
+

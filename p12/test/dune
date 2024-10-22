@@ -1,0 +1,3 @@
+(test
+ (name test_p12)
+ (libraries p12_lib ounit2))
