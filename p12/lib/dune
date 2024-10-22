@@ -1,4 +1,3 @@
 (library
  (name p12_lib)
- (modules iterative map module rec tailrec)
-)
+ (modules iterative map module rec tailrec))
