@@ -5,7 +5,7 @@ let count_divisors n =
   let root = int_of_float (sqrt (float_of_int n)) in
   for i = 1 to root do
     if n mod i = 0 then
-      if i = n / i then count := !count + 1
+      if i = n / i then incr count
       else count := !count + 2
   done;
   !count
