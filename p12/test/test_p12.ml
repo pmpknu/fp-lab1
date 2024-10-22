@@ -31,6 +31,18 @@ let test_iterative_find_triangle _ =
   assert_equal 28 (Iterative.find_triangle_with_divisors 5);
   assert_equal 76576500 (Iterative.find_triangle_with_divisors 500)
 
+(* Module tests *)
+let test_module_result _ =
+  match Module.result with
+  | Some x -> assert_equal 76576500 x
+  | None -> assert_failure "Expected a result, got None"
+
+(* Map tests *)
+let test_map_find_first _ =
+  match Map.result with
+  | Some x -> assert_equal 76576500 x
+  | None -> assert_failure "Expected a result, got None"
+
 let suite =
   "Project Euler Problem 12 Tests" >::: [
     "Tailrec - count_factors" >:: test_tailrec_count_factors;
@@ -39,6 +51,8 @@ let suite =
     "Rec - find_triangular" >:: test_rec_find_triangular;
     "Iterative - count_factors" >:: test_iterative_count_divisors;
     "Iterative - find_triangular" >:: test_iterative_find_triangle;
+    "Module - result" >:: test_module_result;
+    "Map - result" >:: test_map_find_first;
     ]
 
 let _ = run_test_tt_main suite
