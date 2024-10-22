@@ -7,6 +7,7 @@ let count_divisors n =
     if n mod i = 0 then if i = n / i then incr count else count := !count + 2
   done;
   !count
+;;
 
 let find_triangle_with_divisors limit =
   let found = ref false in
@@ -14,11 +15,13 @@ let find_triangle_with_divisors limit =
   let n = ref 1 in
   while not !found do
     let tri_num = triangle_number !n in
-    if count_divisors tri_num > limit then (
+    if count_divisors tri_num > limit
+    then (
       result := tri_num;
       found := true);
     incr n
   done;
   !result
+;;
 
 let result = find_triangle_with_divisors 500

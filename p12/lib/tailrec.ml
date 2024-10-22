@@ -1,10 +1,13 @@
 let count_factors_tail n =
   let rec aux i count =
-    if i * i > n then count
-    else if n mod i = 0 then aux (i + 1) (count + if i * i = n then 1 else 2)
+    if i * i > n
+    then count
+    else if n mod i = 0
+    then aux (i + 1) (count + if i * i = n then 1 else 2)
     else aux (i + 1) count
   in
   if n <= 0 then 0 else aux 1 0
+;;
 
 let find_triangular_with_divisors_tail target =
   let rec aux n tri_num =
@@ -12,5 +15,6 @@ let find_triangular_with_divisors_tail target =
     if factors_count > target then tri_num else aux (n + 1) (tri_num + n + 1)
   in
   aux 1 1
+;;
 
 let result = find_triangular_with_divisors_tail 500
