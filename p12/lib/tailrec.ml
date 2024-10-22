@@ -9,8 +9,7 @@ let count_factors_tail n =
 let find_triangular_with_divisors_tail target =
   let rec aux n tri_num =
     let factors_count = count_factors_tail tri_num in
-    if factors_count > target then tri_num
-    else aux (n + 1) (tri_num + n + 1)
+    if factors_count > target then tri_num else aux (n + 1) (tri_num + n + 1)
   in
   aux 1 1
 

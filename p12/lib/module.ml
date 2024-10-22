@@ -1,5 +1,4 @@
-let triangle_number n =
-  n * (n + 1) / 2
+let triangle_number n = n * (n + 1) / 2
 
 let count_factors_tail n =
   let rec aux i count =
@@ -13,4 +12,6 @@ let triangular_numbers = List.init 15000 (fun n -> triangle_number (n + 1))
 
 let result =
   List.filter (fun x -> count_factors_tail x > 500) triangular_numbers
-  |> List.fold_left (fun acc x -> match acc with Some _ -> acc | None -> Some x) None
+  |> List.fold_left
+       (fun acc x -> match acc with Some _ -> acc | None -> Some x)
+       None

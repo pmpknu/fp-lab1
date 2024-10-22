@@ -44,16 +44,16 @@ let test_map_find_first _ =
   | None -> assert_failure "Expected a result, got None"
 
 let suite =
-  "Project Euler Problem 12 Tests" >::: [
-    "Tailrec - count_factors" >:: test_tailrec_count_factors;
-    "Tailrec - find_triangular" >:: test_tailrec_find_triangular;
-    "Rec - count_factors" >:: test_rec_count_factors;
-    "Rec - find_triangular" >:: test_rec_find_triangular;
-    "Iterative - count_factors" >:: test_iterative_count_divisors;
-    "Iterative - find_triangular" >:: test_iterative_find_triangle;
-    "Module - result" >:: test_module_result;
-    "Map - result" >:: test_map_find_first;
-    ]
+  "Project Euler Problem 12 Tests"
+  >::: [
+         "Tailrec - count_factors" >:: test_tailrec_count_factors;
+         "Tailrec - find_triangular" >:: test_tailrec_find_triangular;
+         "Rec - count_factors" >:: test_rec_count_factors;
+         "Rec - find_triangular" >:: test_rec_find_triangular;
+         "Iterative - count_factors" >:: test_iterative_count_divisors;
+         "Iterative - find_triangular" >:: test_iterative_find_triangle;
+         "Module - result" >:: test_module_result;
+         "Map - result" >:: test_map_find_first;
+       ]
 
 let _ = run_test_tt_main suite
-  
