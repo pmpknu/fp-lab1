@@ -1,5 +1,4 @@
-let is_leap year =
-  (year mod 4 = 0 && year mod 100 <> 0) || (year mod 400 = 0)
+let is_leap year = (year mod 4 = 0 && year mod 100 <> 0) || year mod 400 = 0
 
 let days_in_month year month =
   match month with
@@ -7,3 +6,4 @@ let days_in_month year month =
   | 4 | 6 | 9 | 11 -> 30
   | 2 -> if is_leap year then 29 else 28
   | _ -> failwith "Invalid month"
+;;
