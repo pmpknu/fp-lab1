@@ -7,5 +7,5 @@ let count_sundays start_year end_year =
       if zellers_congruence year month 1 = 0 then incr count
     done
   done;
- !count
+  !count
 ;;
