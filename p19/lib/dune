@@ -1,3 +1,7 @@
 (library
  (name p19_lib)
- (modules date tailrec rec map iterative module))
+ (modules date tailrec rec map iterative module)
+ (inline_tests
+  (flags (-verbose)))
+ (preprocess
+  (pps ppx_inline_test)))

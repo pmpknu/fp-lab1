@@ -9,3 +9,5 @@ let count_sundays start_year end_year =
   done;
   !count
 ;;
+
+let%test _ = count_sundays 1901 2000 = 171

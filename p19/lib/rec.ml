@@ -11,3 +11,5 @@ let rec count_sundays year month day_of_week =
     then new_count + count_sundays (year + 1) 1 next_day_of_week
     else new_count + count_sundays year (month + 1) next_day_of_week)
 ;;
+
+let%test _ = count_sundays 1901 1 2 = 171

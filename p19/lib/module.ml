@@ -8,3 +8,5 @@ let count_sundays start_year end_year =
   in
   List.fold_left (fun acc year -> acc + aux year) 0 years
 ;;
+
+let%test _ = count_sundays 1901 2000 = 171
