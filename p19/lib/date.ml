@@ -1,5 +1,4 @@
 let is_leap year = (year mod 4 = 0 && year mod 100 <> 0) || year mod 400 = 0
-
 let%test "is_leap for leap year 2000" = is_leap 2000 = true
 let%test "is_leap for leap year 2020" = is_leap 2020 = true
 let%test "is_leap for non-leap year 1900" = is_leap 1900 = false
