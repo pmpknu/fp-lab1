@@ -51,6 +51,13 @@ let test_map_find_first _ =
   | None -> assert_failure "Expected a result, got None"
 ;;
 
+(* Lazy collections tests *)
+let test_lazy_find_first _ =
+  match Map.result with
+  | Some x -> assert_equal 76576500 x
+  | None -> assert_failure "Expected a result, got None"
+;;
+
 let suite =
   "Project Euler Problem 12 Tests"
   >::: [ "Tailrec - count_factors" >:: test_tailrec_count_factors
@@ -61,6 +68,7 @@ let suite =
        ; "Iterative - find_triangular" >:: test_iterative_find_triangle
        ; "Module - result" >:: test_module_result
        ; "Map - result" >:: test_map_find_first
+       ; "Lazy - result" >:: test_lazy_find_first
        ]
 ;;
 
